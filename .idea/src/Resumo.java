@@ -7,4 +7,16 @@ public class Resumo {
         this.conteudo = conteudo;
     }
 
+    public String getConteudo() {
+        return conteudo;
+    }
+
+    public String getTema() {
+        return tema;
+    }
+
+    @Override
+    public String toString() {
+        return getTema() + ":" + " " + getConteudo();
+    }
 }

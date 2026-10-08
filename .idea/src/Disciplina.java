@@ -25,8 +25,8 @@ public class Disciplina {
                 soma += notas[i];
             }
         }
-        double mdd = (soma/4);
-        if (mdd >= 7) {
+        double med = (soma/4);
+        if (med >= 7.0) {
             return true;
         }
         return false;
@@ -44,5 +44,4 @@ public class Disciplina {
         double media = (acc / 4);
         return nomeDisciplina + " " + horasDeEstudo + " " + media + " " + Arrays.toString(notas);
     }
-    // toString estranho
 }
