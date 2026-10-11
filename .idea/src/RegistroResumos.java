@@ -14,19 +14,37 @@ public class RegistroResumos {
     }
 
     public String[] pegaResumos() {
-
+        String[] textos = new String[cont];
+        for (int i = 0; i < cont; i++) {
+            textos[i] = resumos[i].toString();
+        }
+        return textos;
     }
 
     public String imprimeResumos() {
+        String resumosTextual = "";
+        for (int i = 0; i < cont; i++) {
+            if (i == cont - 1) {
+                resumosTextual += resumos[i].getTema();
+            } else {
+                resumosTextual += resumos[i].getTema() + " | ";
+            }
+        }
 
+        return "- " + cont + " resumo(s) cadastrado(s)\n" +
+                "- " + resumosTextual;
     }
 
-    public int contaResumos() {
-
+    public int conta() {
+        return cont;
     }
 
-    public boolean temResumos() {
-
+    public boolean temResumo(String tema) {
+        for (int i = 0; i < cont; i++) {
+            if ((resumos[i].getTema()).equals(tema)) {
+                return true;
+            }
+        }
+        return false;
     }
-
 }

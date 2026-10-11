@@ -15,7 +15,7 @@ public class Disciplina {
     }
 
     public void cadastraNota(int nota, double valorNota) {
-        this.notas[nota] = valorNota;
+        this.notas[nota - 1] = valorNota;
     }
 
     public boolean aprovado() {
